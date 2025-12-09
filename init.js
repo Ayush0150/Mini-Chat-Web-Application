@@ -13,67 +13,22 @@ main()
     console.log(err);
   });
 
-let allChats = [
-  {
-    from: "shreya",
-    to: "priya",
-    msg: "send me your exam sheets",
-    created_at: new Date(),
-  },
-  {
-    from: "ayush",
-    to: "fatima",
-    msg: "Assignment ho gaya?",
-    created_at: new Date(),
-  },
-  {
-    from: "rohan",
-    to: "kriti",
-    msg: "Kal class kitne baje hai?",
-    created_at: new Date(),
-  },
-  {
-    from: "neha",
-    to: "arman",
-    msg: "I will call you later",
-    created_at: new Date(),
-  },
-  {
-    from: "aarav",
-    to: "meera",
-    msg: "Send me the link",
-    created_at: new Date(),
-  },
-  {
-    from: "riya",
-    to: "yash",
-    msg: "Where are you now?",
-    created_at: new Date(),
-  },
-  {
-    from: "tina",
-    to: "dev",
-    msg: "Lunch kab karna hai?",
-    created_at: new Date(),
-  },
-  {
-    from: "raj",
-    to: "sofia",
-    msg: "See you tomorrow",
-    created_at: new Date(),
-  },
-  {
-    from: "sid",
-    to: "kiran",
-    msg: "Project done?",
-    created_at: new Date(),
-  },
-  {
-    from: "kunal",
-    to: "aisha",
-    msg: "Let’s meet at 5pm",
-    created_at: new Date(),
-  },
+const allChats = [
+  { from: "shreya", to: "priya", msg: "send me your exam sheets" },
+  { from: "ayush", to: "fatima", msg: "Assignment ho gaya?" },
+  { from: "rohan", to: "kriti", msg: "Kal class kitne baje hai?" },
+  { from: "neha", to: "arman", msg: "I will call you later" },
+  { from: "aarav", to: "meera", msg: "Send me the link" },
+  { from: "riya", to: "yash", msg: "Where are you now?" },
+  { from: "tina", to: "dev", msg: "Lunch kab karna hai?" },
+  { from: "raj", to: "sofia", msg: "See you tomorrow" },
+  { from: "sid", to: "kiran", msg: "Project done?" },
+  { from: "kunal", to: "aisha", msg: "Let's meet at 5pm" },
 ];
 
-Chat.insertMany(allChats);
+Chat.insertMany(allChats)
+  .then(() => {
+    console.log("chats inserted");
+    mongoose.connection.close(); // ADD THIS
+  })
+  .catch((err) => console.log(err));

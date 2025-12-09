@@ -25,8 +25,11 @@
         </form>
       </div>
       <p>Received by: <i> <%=chat.to%></i></p>
-      <p><%=chat.created_at.toString().split(" ")[4]%></p>
-      <p><%=chat.created_at.toString().split(" ").slice(0,4).join(" ")%></p>
+      <p>Created: <%= chat.createdAt.toLocaleString() %></p>
+      <% if(chat.updatedAt && chat.updatedAt.getTime() !==
+      chat.createdAt.getTime()) { %>
+      <p>Updated: <%= chat.updatedAt.toLocaleString() %></p>
+      <% } %>
     </div>
     <hr />
     <%}%>
