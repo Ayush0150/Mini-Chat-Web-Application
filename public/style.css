@@ -1,0 +1,164 @@
+/* ===== Font & Global ===== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(130deg, #0b111a, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  font-family: "Inter", sans-serif;
+  color: #eaf8ff;
+}
+
+/* gradient animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ===== Title ===== */
+h3 {
+  text-align: center;
+  padding: 30px 0;
+  color: #e1ffff;
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* ===== Chat card ===== */
+.chat {
+  width: 90%;
+  max-width: 600px;
+  margin: 25px auto;
+  padding: 20px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 25px;
+  transition: 0.35s ease;
+}
+
+.chat:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* ===== Bubble ===== */
+.msg {
+  margin: 18px 0;
+  padding: 15px 20px;
+  border-radius: 15px;
+  background: rgba(0, 255, 255, 0.12);
+  border-left: 4px solid #00ffe7;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ===== Labels ===== */
+.chat p {
+  color: #f2f2f2;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.chat i {
+  color: #93ffff;
+}
+
+/* ===== Button ===== */
+button {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #fff;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Edit Page Specific Styles ===== */
+body > p {
+  text-align: center;
+  font-size: 18px;
+  color: #a0d8ff;
+  margin: 15px auto;
+  max-width: 600px;
+  padding: 0 20px;
+  line-height: 1.6;
+}
+
+body > p:first-of-type {
+  font-size: 22px;
+  font-weight: 600;
+  color: #00d4ff;
+  margin-top: 30px;
+  letter-spacing: 0.5px;
+}
+
+body > p b {
+  color: #00ffe7;
+  font-weight: 700;
+}
+
+/* ===== Form ===== */
+form {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 25px;
+}
+
+/* Inputs & TextArea */
+form input,
+form textarea {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: 2px solid #00eaff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Placeholder */
+::placeholder {
+  color: #cceeee;
+  opacity: 0.7;
+}
