@@ -4,7 +4,6 @@ const chatSchema = new mongoose.Schema(
   {
     from: {
       type: String,
-
       required: true,
     },
     to: {
